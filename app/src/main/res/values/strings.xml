@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name"> Gym Planner </string>
+    <string name="welcome_to_your_own_personalized_workout_plan">Welcome to your own personalized workout plan!</string>
+    <string name="sign_up">SIGN UP!</string>
+    <string name="login">LOGIN</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="admin_tools">admin tools</string>
+    <string name="plans">plans</string>
+    <string name="checkout">checkout</string>
+    <string name="search">search</string>
+    <string name="back">back</string>
+    <string name="sign_up_now">Sign up now!!</string>
+    <string name="home">Home</string>
+    <string name="type_in_username">Type in Username</string>
+    <string name="please_type_a_password">Please Type A Password</string>
+    <string name="type_password_again">Type Password Again</string>
+</resources>
