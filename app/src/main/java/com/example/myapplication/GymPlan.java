@@ -14,6 +14,15 @@ public class GymPlan extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gym_plan);
+
+        Button mBackButton = findViewById(R.id.backButton);
+        mBackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(GymPlan.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
