@@ -20,4 +20,8 @@
     <string name="login_page">Login Page</string>
     <string name="go_back">Go back</string>
     <string name="cart">CART</string>
+    <string name="user_list">User List</string>
+    <string name="delete_user">Delete User</string>
+    <string name="change_plans">change plans</string>
+    <string name="welcome_to_admin_home">Welcome to Admin Home</string>
 </resources>

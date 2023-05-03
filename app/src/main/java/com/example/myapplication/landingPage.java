@@ -27,6 +27,13 @@ public class landingPage extends AppCompatActivity {
         value = getIntent().getStringExtra(adminCheck);
         if (value.equals("true")) {
             mAdminButton.setVisibility(View.VISIBLE);
+            mAdminButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(landingPage.this, adminHome.class);
+                    startActivity(intent);
+                }
+            });
         } else {
             mAdminButton.setVisibility(View.INVISIBLE);
         }
