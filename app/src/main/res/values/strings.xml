@@ -15,4 +15,9 @@
     <string name="type_in_username">Type in Username</string>
     <string name="please_type_a_password">Please Type A Password</string>
     <string name="type_password_again">Type Password Again</string>
+    <string name="menu">menu</string>
+    <string name="logout">LOGOUT</string>
+    <string name="login_page">Login Page</string>
+    <string name="go_back">Go back</string>
+    <string name="cart">CART</string>
 </resources>
