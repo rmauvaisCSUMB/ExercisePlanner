@@ -23,7 +23,7 @@ public class GymPlan extends AppCompatActivity {
         mBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(GymPlan.this, LoginActivity.class);
+                Intent intent = new Intent(GymPlan.this, landingPage.class);
                 startActivity(intent);
             }
         });

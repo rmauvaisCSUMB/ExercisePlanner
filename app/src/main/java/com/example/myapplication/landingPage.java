@@ -41,6 +41,15 @@ public class landingPage extends AppCompatActivity {
             mAdminButton.setVisibility(View.INVISIBLE);
         }
 
+        Button mPlansButton = findViewById(R.id.planButton);
+        mPlansButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(landingPage.this, GymPlan.class);
+                startActivity(intent);
+            }
+        });
+
         Button mMenuButton = findViewById(R.id.textView2);
         mMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override

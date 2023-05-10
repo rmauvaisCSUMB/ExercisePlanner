@@ -53,6 +53,4 @@ public class User {
         mPassword = password;
     }
 
-    // Fill out for later
-    // private String mFirstName, mLastName, mHeight, mWeight, mAge;
 }

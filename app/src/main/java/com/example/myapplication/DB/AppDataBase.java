@@ -15,13 +15,14 @@ import com.example.myapplication.User;
 public abstract class AppDataBase extends RoomDatabase {
 
     public static final String DATABASE_NAME = "GymLog.db";
-    //public static final String GYMLOG_TABLE = "gymlog_table";
+    public static final String WORKOUT_PLANS = "WORKOUT_PLANS";
     public static final String USER_TABLE = "USER_TABLE";
 
     private static volatile AppDataBase instance;
     private static final Object LOCK = new Object();
 
     public abstract GymExerciseDAO GymLogDAO();
+    public abstract WorkoutPlans WorkoutPlanDAO();
 
     public static AppDataBase getInstance(Context context) {
         if(instance == null) {
