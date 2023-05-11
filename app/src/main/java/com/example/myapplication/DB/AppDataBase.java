@@ -11,7 +11,7 @@ import com.example.myapplication.PRs;
 import com.example.myapplication.Plans;
 import com.example.myapplication.User;
 
-@Database(entities = {User.class, Plans.class, PRs.class}, version = 3)
+@Database(entities = {User.class, Plans.class, PRs.class}, version = 4)
 @TypeConverters({DateTypeConverter.class})
 
 public abstract class AppDataBase extends RoomDatabase {
@@ -26,7 +26,7 @@ public abstract class AppDataBase extends RoomDatabase {
 
     public abstract GymExerciseDAO GymLogDAO();
     public abstract WorkoutPlans WorkoutPlanDAO();
-    public abstract PersonalRecordsDAO prDao();
+    public abstract PersonalRecordsDAO mPersonalRecordsDAO();
 
     public static AppDataBase getInstance(Context context) {
         if(instance == null) {

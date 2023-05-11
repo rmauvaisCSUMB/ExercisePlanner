@@ -22,10 +22,7 @@ public interface WorkoutPlans {
     @Delete
     void delete(Plans... plans);
 
-    @Query("SELECT * FROM " + AppDataBase.WORKOUT_PLANS)
-    List<Plans> getAllPlans();
-
-//    @Query("SELECT * FROM " + AppDataBase.WORKOUT_PLANS + " WHERE mTitle = :Title")
-//    Plans getPlans(String Title);
+    @Query("SELECT * FROM " + AppDataBase.WORKOUT_PLANS + " WHERE mTitle = :Title")
+    Plans getPlans(String Title);
 
 }

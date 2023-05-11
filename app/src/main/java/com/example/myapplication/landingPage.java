@@ -28,15 +28,15 @@ public class landingPage extends AppCompatActivity {
         setContentView(R.layout.activity_landing_page);
         mAdminButton = findViewById(R.id.adminTools);
         value = getIntent().getStringExtra(adminCheck);
-        if (value.equals("true")) {
-            mAdminButton.setVisibility(View.VISIBLE);
-            mAdminButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(landingPage.this, adminHome.class);
-                    startActivity(intent);
-                }
-            });
+            if(value != null && value.equalsIgnoreCase("true")) {
+                mAdminButton.setVisibility(View.VISIBLE);
+                mAdminButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(landingPage.this, adminHome.class);
+                        startActivity(intent);
+                    }
+                });
         } else {
             mAdminButton.setVisibility(View.INVISIBLE);
         }
@@ -50,11 +50,11 @@ public class landingPage extends AppCompatActivity {
             }
         });
 
-        Button mMenuButton = findViewById(R.id.textView2);
+        Button mMenuButton = findViewById(R.id.newPersonalRecord);
         mMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(landingPage.this, LoginActivity.class);
+                Intent intent = new Intent(landingPage.this, PersonalRecordsPage.class);
                 startActivity(intent);
             }
         });
@@ -86,6 +86,11 @@ public class landingPage extends AppCompatActivity {
         }
         else if (id == R.id.item2) {
             Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        else if (id == R.id.item3) {
+            Intent intent = new Intent(this, landingPage.class);
             startActivity(intent);
             return true;
         }

@@ -22,12 +22,7 @@ public interface PersonalRecordsDAO {
     @Delete
     void delete(PRs... pRs);
 
-    @Query("SELECT * FROM AppDataBase.PERSONAL_RECORDS" + " ORDER BY date desc")
-    List<PRs> getAllPRs();
-
-    @Query("SELECT * FROM AppDataBase.PERSONAL_RECORDS" + " WHERE user_id = :userId")
-    List<PRs> getUserbyId(int userId);
-
-    @Query("SELECT * FROM AppDataBase.PERSONAL_RECORDS" + " WHERE user_id = :userId ORDER BY date DESC")
-    List<PRs> getPRsbyUserId(int userId);
+    @Query("SELECT * FROM " + AppDataBase.PERSONAL_RECORDS + " WHERE user_id= :userId ORDER BY mDate DESC")
+    List<PRs> getAllPRs(int userId);
 }
+

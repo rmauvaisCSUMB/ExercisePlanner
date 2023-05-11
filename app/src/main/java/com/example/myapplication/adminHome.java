@@ -32,7 +32,8 @@ public class adminHome extends AppCompatActivity {
         mDeleteUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mGymLogDAO.delete();
+                User userToDelete = new User("dug", "dug123", false);
+                mGymLogDAO.delete(userToDelete);
                 Toast.makeText(adminHome.this, "USER DELETED", Toast.LENGTH_SHORT).show();
             }
         });
@@ -69,6 +70,11 @@ public class adminHome extends AppCompatActivity {
         }
         else if (id == R.id.item2) {
             Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        else if (id == R.id.item3) {
+            Intent intent = new Intent(this, landingPage.class);
             startActivity(intent);
             return true;
         }

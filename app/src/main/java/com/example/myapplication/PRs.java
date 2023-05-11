@@ -6,6 +6,8 @@ import androidx.room.PrimaryKey;
 
 import com.example.myapplication.DB.AppDataBase;
 
+import java.util.Date;
+
 @Entity(tableName = AppDataBase.PERSONAL_RECORDS)
 public class PRs {
 
@@ -18,14 +20,28 @@ public class PRs {
     @ColumnInfo(name = "movement")
     private String movement;
 
-    @ColumnInfo(name = "date")
-    private String mDate;
+    @ColumnInfo(name = "weight")
+    private double weight;
 
-    public PRs(int userId, String movement, String mDate) {
+    private Date mDate;
+
+    public PRs(int userId, String movement, double weight) {
         this.userId = userId;
         this.movement = movement;
-        this.mDate = mDate;
+        this.weight = weight;
+        mDate = new Date();
     }
+
+    @Override
+    public String toString() {
+        return "Personal Record # " + id + "\n" +
+                "User: " + userId + "\n" +
+                "Movement: " + movement + "\n" +
+                "Weight: " + weight + "\n" +
+                "Date: " + mDate + "\n" +
+                "=-=-=-=-=-\n";
+    }
+
 
     public int getId() {
         return id;
@@ -51,11 +67,19 @@ public class PRs {
         this.movement = movement;
     }
 
-    public String getDate() {
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public Date getDate() {
         return mDate;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         mDate = date;
     }
 }
