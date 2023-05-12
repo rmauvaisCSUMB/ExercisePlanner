@@ -20,4 +20,26 @@
     <string name="login_page">Login Page</string>
     <string name="go_back">Go back</string>
     <string name="cart">CART</string>
+    <string name="user_list">User List</string>
+    <string name="delete_user">Delete User</string>
+    <string name="change_plans">change plans</string>
+    <string name="welcome_to_admin_home">Welcome to Admin Home</string>
+    <string name="new_pr_s">New PR\'s</string>
+    <string name="pull_workout">Pull Workout</string>
+    <string name="leg_workout">Leg Workout</string>
+    <string name="push_workout">Push Workout</string>
+    <string name="go">GO</string>
+    <string name="go2">GO</string>
+    <string name="go3">GO</string>
+    <string name="core_workout">Core Workout</string>
+    <string name="go4">GO</string>
+    <string name="personal_records">PERSONAL RECORDS</string>
+    <string name="usernamePR">Username</string>
+    <string name="movement_ex_squat">Movement (Ex: Squat)</string>
+    <string name="date">Date</string>
+    <string name="weight">Weight</string>
+    <string name="submit">SUBMIT</string>
+    <string name="usernamePRs">Username</string>
+    <string name="hitPR"><![CDATA[HIT A PR & INPUT IT !!!!]]></string>
+    <string name="landing_page">Landing Page</string>
 </resources>
