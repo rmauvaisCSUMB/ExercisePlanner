@@ -85,12 +85,12 @@ public class landingPage extends AppCompatActivity {
             return true;
         }
         else if (id == R.id.item2) {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, landingPage.class);
             startActivity(intent);
             return true;
         }
         else if (id == R.id.item3) {
-            Intent intent = new Intent(this, landingPage.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             return true;
         }

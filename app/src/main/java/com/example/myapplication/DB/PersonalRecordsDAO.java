@@ -24,5 +24,6 @@ public interface PersonalRecordsDAO {
 
     @Query("SELECT * FROM " + AppDataBase.PERSONAL_RECORDS + " WHERE user_id= :userId ORDER BY mDate DESC")
     List<PRs> getAllPRs(int userId);
+
 }
 

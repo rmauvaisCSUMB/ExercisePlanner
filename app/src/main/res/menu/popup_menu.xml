@@ -6,9 +6,9 @@
         android:title="@string/login_page"
         app:showAsAction="never"/>
     <item android:id="@+id/item2"
-        android:title="@string/logout"
+        android:title="@string/landing_page"
         app:showAsAction="never"/>
     <item android:id="@+id/item3"
-        android:title="@string/landing_page"
+        android:title="@string/logout"
         app:showAsAction="never"/>
 </menu>
