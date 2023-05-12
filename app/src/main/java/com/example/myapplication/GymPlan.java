@@ -57,7 +57,19 @@ public class GymPlan extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(GymPlan.this);
 
-                builder.setMessage("");
+                builder.setMessage("EACH SET WILL BE 4 SETS EACH, 1ST SET 10-12 REPS THE REST OF THE SETS 6-8 AND LAST SET IS TO FAILURE" + "\n" +
+                        "===---===---BACK---===---===" + "\n" +
+                        "~ Lat Pulldown" + "\n" +
+                        "~ Close Grip Seated Row" + "\n" +
+                        "~ Pull Ups" + "\n" +
+                        "===---===---MORE BACK---===---===" + "\n" +
+                        "~ Chest Supported Row" + "\n" +
+                        "~ Lat Pull Down w/ bar or rope" + "\n" +
+                        "~ Rear Delts w/ cables" + "\n" +
+                        "===---===---BICEPS---===---===" + "\n" +
+                        "~ Dumbbell Curls" + "\n" +
+                        "~ Hammer Curls w/ dumbbells or rope" + "\n" +
+                        "~ Cable Curls w/ EZ bar");
                 builder.setNegativeButton("Pull Day", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -75,6 +87,17 @@ public class GymPlan extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(GymPlan.this);
 
+                builder.setMessage("EACH SET WILL BE 4 SETS EACH, 1ST SET 10-12 REPS THE REST OF THE SETS 6-8 AND LAST SET IS TO FAILURE" + "\n" +
+                        "===---===---LEGS WARMUP---===---===" + "\n" +
+                        "~ Leg Extension" + "\n" +
+                        "~ Adductor Machine" + "\n" +
+                        "~ Abductor Machine" + "\n" +
+                        "~ Hamstring Curl Machine" + "\n" +
+                        "===---===---MORE LEGS---===---===" + "\n" +
+                        "~ Leg Press" + "\n" +
+                        "~ Romanian Dead Lifts" + "\n" +
+                        "~ Bulgarian Split Squats" + "\n" +
+                        "===---===---STRETCH!---===---===" + "\n");
                 builder.setNegativeButton("Leg Day", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -92,6 +115,19 @@ public class GymPlan extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(GymPlan.this);
 
+                builder.setMessage("EACH SET WILL BE 4 SETS EACH, AND DO 10-12 REPS EACH SET FOCUS ON CONTRACTION" + "\n" +
+                        "===---===---CORE---===---===" + "\n" +
+                        "~ Crunch" + "\n" +
+                        "~ Flutter Kicks" + "\n" +
+                        "~ Russian Twists" + "\n" +
+                        "===---===---MORE CORE---===---===" + "\n" +
+                        "~ V Crunch" + "\n" +
+                        "~ Plank" + "\n" +
+                        "~ Bridge" + "\n" +
+                        "===---===---EVEN MORE CORE---===---===" + "\n" +
+                        "~ Sit ups" + "\n" +
+                        "~ Bicycle Kicks" + "\n" +
+                        "~ Hip Lift Crunches");
                 builder.setNegativeButton("Core Day", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {

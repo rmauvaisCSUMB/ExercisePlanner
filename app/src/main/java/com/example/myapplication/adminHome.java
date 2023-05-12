@@ -32,9 +32,8 @@ public class adminHome extends AppCompatActivity {
         mDeleteUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                User userToDelete = new User("dug", "dug123", false);
-                mGymLogDAO.delete(userToDelete);
-                Toast.makeText(adminHome.this, "USER DELETED", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(adminHome.this, deleteUser.class);
+                startActivity(intent);
             }
         });
     }
