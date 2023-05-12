@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,22 +12,44 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
-public class GymPlan extends AppCompatActivity {
+import com.example.myapplication.DB.AppDataBase;
+import com.example.myapplication.DB.GymExerciseDAO;
+
+public class adminHome extends AppCompatActivity {
+
+
+    private GymExerciseDAO mGymLogDAO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gym_plan);
+        setContentView(R.layout.activity_admin_home);
 
-        Button mBackButton = findViewById(R.id.backButton);
-        mBackButton.setOnClickListener(new View.OnClickListener() {
+        Button mDeleteUser = findViewById(R.id.buttonDeleteUser);
+
+        mDeleteUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(GymPlan.this, landingPage.class);
-                startActivity(intent);
+                User userToDelete = new User("dug", "dug123", false);
+                mGymLogDAO.delete(userToDelete);
+                Toast.makeText(adminHome.this, "USER DELETED", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void getDataBase(){
+        mGymLogDAO = Room.databaseBuilder(this, AppDataBase.class, AppDataBase.DATABASE_NAME)
+                .allowMainThreadQueries()
+                .fallbackToDestructiveMigration()
+                .build()
+                .GymLogDAO();
+    }
+
+    public static Intent intentFactory(Context context){
+        Intent intent = new Intent(context, adminHome.class);
+        return intent;
     }
 
     @Override
@@ -57,5 +80,4 @@ public class GymPlan extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

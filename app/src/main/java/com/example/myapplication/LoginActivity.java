@@ -1,11 +1,15 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -91,9 +95,9 @@ public class LoginActivity extends AppCompatActivity {
         if (mGymLogDAO.getAllUsers().size() <= 0) {
             User admin2 = new User("admin2", "admin2", true);
             mGymLogDAO.insert(admin2);
+            User testUser1 = new User("testUser1", "testUser1", false);
+            mGymLogDAO.insert(testUser1);
         }
-        User testUser1 = new User("testUser1", "testUser1", false);
-        mGymLogDAO.insert(testUser1);
     }
 
     public static Intent intentFactory(Context context, int userId){
